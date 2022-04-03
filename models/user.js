@@ -5,7 +5,14 @@ const UserSchema = new Schema({
     username : {
         type : String,
         required : true,
-        unique : true
+        unique : true,
+        minlength : 3,
+        maxlength : 16
+    },
+    name : {
+        type : String,
+        required : true,
+        minlength : 4
     },
     email : {
         type : String,
@@ -30,6 +37,11 @@ const UserSchema = new Schema({
         default : 0
     },
     errors : {
+        type : Number,
+        required : true,
+        default : 0
+    },
+    speed : {
         type : Number,
         required : true,
         default : 0
