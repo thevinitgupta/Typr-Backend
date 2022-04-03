@@ -5,6 +5,8 @@ require("dotenv").config();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
+require("./db/connections")
+
 const port = process.env.PORT || 5500;
 
 app.get("/",(req,res)=>{
